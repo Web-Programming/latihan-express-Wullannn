@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mhsController = require('../controllers/mahasiswa');
-const mahasiswaRoutes = require('./routes/mahasiswa');
+// const mahasiswaRoutes = require('./routes/mahasiswa');
 
 router.get("/", mhsController.index); // List Mahasiswa
 router.post("/insert", mhsController.insert); // Insert Mahasiswa
