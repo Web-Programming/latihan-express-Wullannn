@@ -1,12 +1,14 @@
-const express = require('express');
-const router = express.Router();
-const mhsController = require('../controllers/mahasiswa');
-// const mahasiswaRoutes = require('./routes/mahasiswa');
+var express = require('express');
+var router = express.Router();
 
-router.get("/", mhsController.index); // List Mahasiswa
-router.post("/insert", mhsController.insert); // Insert Mahasiswa
-router.patch("/update/:id", mhsController.update); // Update Mahasiswa
-router.get("/show/:id", mhsController.show); // Show detail Mahasiswa by ID
-router.delete("/delete/:id", mhsController.destroy); // Delete Mahasiswa by ID
+const mhsController = require('../controllers/mahasiswacontroller');
+router.get("/", mhsController.index); //list mahasiswa 
+router.post("/insert", mhsController.insert); //insert mahasiswa
+//SAMPAI DI SINI
+
+
+router.patch("/update/:id", mhsController.update); //mengupdate mahasiswa 
+router.get("/show/:id", mhsController.show); //show detail mahasiswa by id 
+router.delete("/delete/:id", mhsController.destroy); //delete mahasiswa by id
 
 module.exports = router;
